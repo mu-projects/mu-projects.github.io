@@ -63,7 +63,10 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-    analytics.logEvent('notification_received');
+    logEvent(analytics, 'button_click', {
+      buttonName: 'my_button',
+      buttonType: 'primary'
+    });
   </script> 
 
 
